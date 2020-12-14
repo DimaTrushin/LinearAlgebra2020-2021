@@ -111,14 +111,37 @@ A =
 Мы же пойдем чуть более простым путем.
 
 \begin{proof}
-Рассмотрим матрицу $\lambda E - A$, где $\lambda$ -- неизвестное число.
-Введем следующее обозначение $R(\lambda) = \widehat{\lambda E - A}$.
-
-Заметим, что каждый коэффициент $R(\lambda)$ является многочленом от $\lambda$, т.е. $R(\lambda) = (r_{ij}(\lambda))$ и $r_{ij}(\lambda)$ -- многочлен.
-То есть $r_{ij}(\lambda) = \sum_k r_{ijk}\lambda^k$.
-Тогда $R(\lambda) = \sum_k R_k \lambda^k$, где $R_k=(r_{ijk})$.
-То есть $R(\lambda)\in\Matrix{n}[\lambda]$.
-
+    Рассмотрим матрицу $\lambda E - A$, где $\lambda$ -- неизвестное число.
+    Введем следующее обозначение $R(\lambda) = \widehat{\lambda E - A}$.
+    
+    Заметим, что каждый коэффициент $R(\lambda)$ является многочленом от $\lambda$, т.е. $R(\lambda) = (r_{ij}(\lambda))$ и $r_{ij}(\lambda)$ -- многочлен.
+    То есть $r_{ij}(\lambda) = \sum_k r_{ijk}\lambda^k$, где $r_{ijk}$ -- коэффициент при $\lambda^k$ в многочлене $r_{ij}(\lambda)$.
+    Тогда $R(\lambda) = \sum_k R_k \lambda^k$, где $R_k=(r_{ijk})$.
+    То есть $R(\lambda)\in\Matrix{n}[\lambda]$.
+    
+    Пример:
+    
+    \[
+        \begin{pmatrix}
+            {5-\lambda + 2 \lambda^2}&{3}\\
+            {4 - \lambda}&{2+\lambda }\\
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                {5}&{3}\\
+                {4}&{2}\\
+                \end{pmatrix} 
+            +
+            \begin{pmatrix}
+                {-1}&{0}\\
+                {-1}&{1 }\\
+                \end{pmatrix}  \lambda
+            + 
+            \begin{pmatrix}
+                {2}&{0}\\
+                {0}&{0}\\
+                \end{pmatrix}  \lambda^2
+    \]
+    
 Теперь применим формулы для перемножения матрицы с ее присоединенной из утверждения~\ref{claim::InvMatExplicite} для матрицы $\lambda E - A$, получим 
 \[
 (\lambda E - A)R(\lambda) = R(\lambda)(\lambda E - A) = \det(\lambda E - A)E=\chi_A(\lambda)E
