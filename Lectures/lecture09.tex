@@ -118,6 +118,30 @@ A =
 То есть $r_{ij}(\lambda) = \sum_k r_{ijk}\lambda^k$.
 Тогда $R(\lambda) = \sum_k R_k \lambda^k$, где $R_k=(r_{ijk})$.
 То есть $R(\lambda)\in\Matrix{n}[\lambda]$.
+Для ясности, давайте проиллюстрируем сказанное на следующем примере.
+\[
+\begin{pmatrix}
+{5 - \lambda + 2 \lambda^2}&{3}\\
+{4 - \lambda}&{2 + \lambda}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+{5}&{3}\\
+{4}&{2}
+\end{pmatrix}
++
+\begin{pmatrix}
+{-1}&{0}\\
+{-1}&{1}
+\end{pmatrix}
+\lambda
++
+\begin{pmatrix}
+{2}&{0}\\
+{0}&{0}
+\end{pmatrix}
+\lambda^2
+\]
 
 Теперь применим формулы для перемножения матрицы с ее присоединенной из утверждения~\ref{claim::InvMatExplicite} для матрицы $\lambda E - A$, получим 
 \[
